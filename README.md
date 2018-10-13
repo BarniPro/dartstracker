@@ -157,7 +157,7 @@ Az alkalmazás a következő adatbázisokat tartalmazza, melyek segítségével 
 
 **GET**
 */users*
-Response:
+Request:
 
     [
     	{
@@ -185,7 +185,7 @@ Data:
     	role: number;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
@@ -203,7 +203,7 @@ Data:
     {
     }
 
-Response: 
+Request: 
 
     {
     }
@@ -211,7 +211,7 @@ Response:
 **GET**
 */users/{:id}*
 
-Response:
+Request:
 
     {
     	id: number;
@@ -231,7 +231,7 @@ Data:
     	role: number;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
@@ -246,7 +246,7 @@ Response:
 **GET**
 */competitions*
 
-Response:
+Request:
 
     [
     	{
@@ -275,7 +275,7 @@ Data:
     	official_ids: string;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
@@ -294,7 +294,7 @@ Data:
     {
     }
 
-Response: 
+Request: 
 
     {
     }
@@ -302,7 +302,7 @@ Response:
 **GET**
 */competitions/{:id}*
 
-Response:
+Request:
 
     {
     	id: number;
@@ -326,7 +326,7 @@ Data:
     	official_ids: string;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
@@ -341,7 +341,7 @@ Response:
 **GET**
 */competitions/{:competition_id}/matches*
 
-Response:
+Request:
 
     [
     	{
@@ -376,7 +376,7 @@ Data:
     	round_ids: string;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
@@ -398,7 +398,7 @@ Data:
     {
     }
 
-Response: 
+Request: 
 
     {
     }
@@ -406,7 +406,7 @@ Response:
 **GET**
 */competitions/{:competition_id}/matches/{:id}*
 
-Response:
+Request:
 
     {
     	id: number;
@@ -435,7 +435,7 @@ Data:
     	round_ids: string;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
@@ -453,7 +453,7 @@ Response:
 **GET**
 */competitions/{:competition_id}/matches/{:match_id}/rounds*
 
-Response:
+Request:
 
     [
     	{
@@ -488,7 +488,7 @@ Data:
     	player_two_throw_three: number;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
@@ -510,7 +510,7 @@ Data:
     {
     }
 
-Response: 
+Request: 
 
     {
     }
@@ -518,7 +518,7 @@ Response:
 **GET**
 */competitions/{:competition_id}/matches/{:match_id}/rounds/{:id}*
 
-Response:
+Request:
 
     {
     	id: number;
@@ -548,7 +548,7 @@ Data:
     	player_two_throw_three: number;
     }
 
-Response: 
+Request: 
 
     {
     	id: number;
