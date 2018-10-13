@@ -157,7 +157,7 @@ Az alkalmazás a következő adatbázisokat tartalmazza, melyek segítségével 
 
 **GET**
 */users*
-Request:
+Response:
 
     [
     	{
@@ -175,7 +175,7 @@ Request:
 
 **POST**
 */users*
-Data:
+Request:
 
     {
     	username: string;
@@ -185,7 +185,7 @@ Data:
     	role: number;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
@@ -198,12 +198,12 @@ Request:
 
 **DELETE**
 */users/{:id}*
-Data:
+Request:
 
     {
     }
 
-Request: 
+Response: 
 
     {
     }
@@ -211,7 +211,7 @@ Request:
 **GET**
 */users/{:id}*
 
-Request:
+Response:
 
     {
     	id: number;
@@ -225,13 +225,13 @@ Request:
 **POST**
 */users/{:id}*
 
-Data:
+Request:
 
     {
     	role: number;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
@@ -246,7 +246,7 @@ Request:
 **GET**
 */competitions*
 
-Request:
+Response:
 
     [
     	{
@@ -265,7 +265,7 @@ Request:
 **POST**
 */competitions*
 
-Data:
+Request:
 
     {
     	name: string;
@@ -275,7 +275,7 @@ Data:
     	official_ids: string;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
@@ -289,12 +289,12 @@ Request:
 **DELETE**
 */competitions/{:id}*
 
-Data:
+Request:
 
     {
     }
 
-Request: 
+Response: 
 
     {
     }
@@ -302,7 +302,7 @@ Request:
 **GET**
 */competitions/{:id}*
 
-Request:
+Response:
 
     {
     	id: number;
@@ -316,7 +316,7 @@ Request:
 **POST**
 */competitions/{:id}*
 
-Data:
+Request:
 
     {
     	name: string;
@@ -326,7 +326,7 @@ Data:
     	official_ids: string;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
@@ -341,7 +341,7 @@ Request:
 **GET**
 */competitions/{:competition_id}/matches*
 
-Request:
+Response:
 
     [
     	{
@@ -363,7 +363,7 @@ Request:
 **POST**
 */competitions/{:competition_id}/matches*
 
-Data:
+Request:
 
     {
     	competition_id: number;
@@ -376,7 +376,7 @@ Data:
     	round_ids: string;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
@@ -393,12 +393,12 @@ Request:
 **DELETE**
 */competitions/{:competition_id}/matches/{:id}*
 
-Data:
+Request:
 
     {
     }
 
-Request: 
+Response: 
 
     {
     }
@@ -406,7 +406,7 @@ Request:
 **GET**
 */competitions/{:competition_id}/matches/{:id}*
 
-Request:
+Response:
 
     {
     	id: number;
@@ -423,7 +423,7 @@ Request:
 **POST**
 */competitions/{:competition_id}/matches/{:id}*
 
-Data:
+Request:
 
     {
     	match_date: Date;
@@ -435,7 +435,7 @@ Data:
     	round_ids: string;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
@@ -453,7 +453,7 @@ Request:
 **GET**
 */competitions/{:competition_id}/matches/{:match_id}/rounds*
 
-Request:
+Response:
 
     [
     	{
@@ -475,7 +475,7 @@ Request:
 **POST**
 */competitions/{:competition_id}/matches/{:match_id}/rounds*
 
-Data:
+Request:
 
     {
     	competition_id: number;
@@ -488,7 +488,7 @@ Data:
     	player_two_throw_three: number;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
@@ -505,12 +505,12 @@ Request:
 **DELETE**
 */competitions/{:competition_id}/matches/{:match_id}/rounds/{:id}*
 
-Data:
+Request:
 
     {
     }
 
-Request: 
+Response: 
 
     {
     }
@@ -518,7 +518,7 @@ Request:
 **GET**
 */competitions/{:competition_id}/matches/{:match_id}/rounds/{:id}*
 
-Request:
+Response:
 
     {
     	id: number;
@@ -535,7 +535,7 @@ Request:
 **POST**
 */competitions/{:competition_id}/matches/{:match_id}/rounds/{:id}*
 
-Data:
+Request:
 
     {
     	competition_id: number;
@@ -548,7 +548,7 @@ Data:
     	player_two_throw_three: number;
     }
 
-Request: 
+Response: 
 
     {
     	id: number;
