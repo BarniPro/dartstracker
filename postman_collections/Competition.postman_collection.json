@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "826f71ff-48ea-44c9-b52c-c75fd8d79467",
+		"name": "Competition",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAllCompetitions",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCompetitionById",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCompetitionOfficials",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/officials",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"officials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeCompetitionOfficials",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/officials/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"officials",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postCompetition",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Masters 3\",\r\n\t\"country\": \"Hungary\",\r\n\t\"start_date\": \"2018-11-01\",\r\n\t\"end_date\": \"2018-11-11\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putCompetition",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Mastersa\",\r\n\t\"country\": \"Hungary\",\r\n\t\"start_date\": \"2018-11-01\",\r\n\t\"end_date\": \"2018-11-11\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCompetition",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "c8991713-88de-4fa7-8995-8a2515631e4e",
+		"name": "Match",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getMatchesByCompetitionId",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getMatchByCompetitionIdAndId",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches/22",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postMatch",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"match_date\": \"2018-10-20\",\r\n\t\"player_one\": {\"id\": 1},\r\n\t\"player_two\": {\"id\": 2},\r\n\t\"player_one_score\": 500,\r\n\t\"player_two_score\": 600\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putMatch",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"username\": \"dadams\",\r\n\t\"password\": \"1234\",\r\n\t\"human_name\": \"Daniel Adams\",\r\n\t\"country\": \"UK\",\r\n\t\"date_of_birth\": \"1965-06-12\",\r\n\t\"role\": \"ROLE_PLAYER\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/users/16",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMatch",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches",
+						"15"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "37cdcc24-eb7f-4feb-96d7-ecc57a8bf4b4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "0f6f013f-029b-4976-932c-8c0b5c06901a",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

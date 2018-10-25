@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "3a838871-4e2d-4f72-b534-eb6be57c047c",
+		"name": "Round",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getRoundsByMatchId",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches/3/rounds",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches",
+						"3",
+						"rounds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRoundByMatchIdAndRoundId",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches/3/rounds/13",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches",
+						"3",
+						"rounds",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postRound",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"player_one_throw_one\": 123,\r\n\t\"player_one_throw_two\": 456,\r\n\t\"player_one_throw_three\": 789,\r\n\t\"player_two_throw_one\": 987,\r\n\t\"player_two_throw_two\": 654,\r\n\t\"player_two_throw_three\": 321\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches/3/rounds",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches",
+						"3",
+						"rounds"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "putRound",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"player_one_throw_one\": 1,\r\n\t\"player_one_throw_two\": 456,\r\n\t\"player_one_throw_three\": 789,\r\n\t\"player_two_throw_one\": 987,\r\n\t\"player_two_throw_two\": 654,\r\n\t\"player_two_throw_three\": 321\r\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches/3/rounds/101",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches",
+						"3",
+						"rounds",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRound",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{}"
+				},
+				"url": {
+					"raw": "localhost:8080/competitions/1/matches/3/rounds/101",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"competitions",
+						"1",
+						"matches",
+						"3",
+						"rounds",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
