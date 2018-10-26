@@ -10,7 +10,7 @@ Az adatbázis megvalósításához a h2 adatbázismotort használjuk, és egy .s
 
 ### Adatbázis terv
 
-[Adatbázis terv vizuálisan](https://github.com/barnipro/dartstracker/database.png)
+[Adatbázis terv vizuálisan](https://github.com/Barnipro/dartstracker/database.png)
 
 ### Alkalmazott könyvtárstruktúra
 
@@ -25,4 +25,4 @@ Ebben a mappában találhatók azok osztályok, melyek a CRUD műveleteket végz
 
 - Security: Az autentikációért felelős egyéb osztályok találhatóak itt. 
 
-A részletes végponttervek a [readme.md](https://github.com/barnipro/dartstracker/readme.md) file-ban találhatók.
+A részletes végponttervek a [readme.md](https://github.com/Barnipro/dartstracker/readme.md) file-ban találhatók.
