@@ -15,7 +15,7 @@ INSERT INTO users(id,username,human_name,country,date_of_birth,role,password) VA
 INSERT INTO users(id,username,human_name,country,date_of_birth,role,password) VALUES (15,'c_li','Christiana Li','Azerbaijan','2000-07-21','ROLE_PLAYER','$2a$10$KzjHavOxl1fjxXJDb22Q1OZsCNcW.f07lSyJsgjLck34ugGNRwoBO');
 INSERT INTO users(id,username,human_name,country,date_of_birth,role,password) VALUES (16,'k_bradford','Kealan Bradford','USA','1967-05-20','ROLE_PLAYER','$2a$10$KzjHavOxl1fjxXJDb22Q1OZsCNcW.f07lSyJsgjLck34ugGNRwoBO');
 
-INSERT INTO competitions (id, name, country, start_date, end_date) VALUES (1, 'All Stars', 'USA', '2018-01-15', '2018-01-24');
+INSERT INTO competitions (id, name, country, start_date, end_date) VALUES (1, 'All Stars', 'United States', '2018-01-15', '2018-01-24');
 INSERT INTO competitions (id, name, country, start_date, end_date) VALUES (2, 'Masters', 'France', '2018-03-07', '2018-03-12');
 INSERT INTO competitions (id, name, country, start_date, end_date) VALUES (3, 'Champions', 'Germany', '2018-04-30', '2018-05-05');
 INSERT INTO competitions (id, name, country, start_date, end_date) VALUES (4, 'Kings Trial', 'Bulgaria', '2018-07-21', '2018-08-01');
