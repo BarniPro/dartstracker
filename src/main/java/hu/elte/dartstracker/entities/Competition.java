@@ -42,11 +42,20 @@ public class Competition implements Serializable {
     @Temporal(TemporalType.DATE)
     private Date end_date;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY, targetEntity=User.class, cascade =
+            {
+                    CascadeType.DETACH,
+                    CascadeType.MERGE,
+                    CascadeType.PERSIST
+            })
     @JoinTable(name = "competitions_officials",
-            joinColumns = { @JoinColumn(name = "competition_id") },
-            inverseJoinColumns = { @JoinColumn(name = "official_id") })
+            joinColumns = {@JoinColumn(name ="competition_id")},
+            inverseJoinColumns = {@JoinColumn(name = "official_id")})
     private List<User> officials;
+
+    public void removeOfficial(User official) {
+        officials.remove(official);
+    }
 
     public List<User> getOfficials() {
         return officials;

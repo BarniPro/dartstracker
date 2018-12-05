@@ -48,7 +48,16 @@ public class User implements Serializable {
     @Enumerated(EnumType.STRING)
     private Role role;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "officials")
+
+    @ManyToMany(fetch = FetchType.LAZY, targetEntity=Competition.class, cascade =
+            {
+                    CascadeType.DETACH,
+                    CascadeType.MERGE,
+                    CascadeType.PERSIST
+            })
+    @JoinTable(name = "competitions_officials",
+            joinColumns = {@JoinColumn(name ="official_id")},
+            inverseJoinColumns = {@JoinColumn(name = "competition_id")})
     @JsonIgnore
     private List<Competition> competitions;
 
@@ -70,6 +79,10 @@ public class User implements Serializable {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setPassword(String password) {

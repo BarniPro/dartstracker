@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Iterator;
 import java.util.Optional;
 
 @CrossOrigin
@@ -18,6 +19,7 @@ import java.util.Optional;
 public class CompetitionController {
     @Autowired
     private CompetitionRepository competitionRepository;
+    private Optional<User> newOfficial;
 
     protected <Competition> Optional<Competition> getEntity(Long id){
         return (Optional<Competition>) competitionRepository.findById(id);
@@ -57,6 +59,7 @@ public class CompetitionController {
     public ResponseEntity delete(@PathVariable Long id) {
         Optional<Competition> optionalCompetition = competitionRepository.findById(id);
         if (optionalCompetition.isPresent()) {
+            deleteOfficials(id);
             deleteEntity(id);
             return ResponseEntity.ok().build();
         }
@@ -118,6 +121,21 @@ public class CompetitionController {
                 return ResponseEntity.ok().build();
             }
             return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.notFound().build();
+    }
+
+    @DeleteMapping("/{id}/officials")
+    public ResponseEntity<User> deleteOfficials(
+            @PathVariable Long id) {
+
+        Optional<Competition> oCompetitions = getEntity(id);
+        if(oCompetitions.isPresent()){
+            for (Iterator<User> userIterator = userRepository.findByCompetitionsId(id).iterator(); userIterator.hasNext();) {
+                User user = userIterator.next();
+                oCompetitions.get().getOfficials().remove(user);
+            }
+            return ResponseEntity.ok().build();
         }
         return ResponseEntity.notFound().build();
     }
