@@ -69,7 +69,7 @@ public class UserController {
         Optional<User> optionalUser = userRepository.findById(id);
         if (optionalUser.isPresent()) {
             user.setId(id);
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.setPassword(user.getPassword());
             return ResponseEntity.ok(userRepository.save(user));
         }
         return ResponseEntity.notFound().build();
