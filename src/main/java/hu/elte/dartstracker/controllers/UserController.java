@@ -89,8 +89,12 @@ public class UserController {
         return ResponseEntity.ok(userRepository.save(user));
     }
 
-    @PostMapping("login")
-    public ResponseEntity login(@RequestBody User user) {
+    @PostMapping("/login")
+    public ResponseEntity<User> login(@RequestBody String username) {
+        Optional<User> oUser = userRepository.findByUsername(username);
+        if (oUser.isPresent()) {
+            return ResponseEntity.ok(oUser.get());
+        }
         return ResponseEntity.ok().build();
     }
 
